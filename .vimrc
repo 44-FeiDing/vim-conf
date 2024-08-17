@@ -1,4 +1,4 @@
-"base
+"base 
 syntax on
 set nu
 set ruler
@@ -18,7 +18,7 @@ set mouse=a
 set completeopt-=preview
 autocmd VimEnter * NERDTreeToggle
 imap jl <Esc>
-
+vmap jl <Esc>
 
 "vim-plug
 call plug#begin('~/.vim/plugged')
@@ -33,7 +33,7 @@ call plug#end()
 
 
 "NerdTree
-map <C-s> :NERDTreeToggle<CR>
+map <C-m> :NERDTreeToggle<CR>
 
 
 "auto-pairs
