@@ -27,6 +27,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'vim-airline/vim-airline'
   Plug 'luochen1990/rainbow'
+  Plug 'Lixuannan/VOIM'
 call plug#end()
 
 
@@ -73,3 +74,6 @@ let g:rainbow_conf = {
 	\		'nerdtree': 0,  
 	\	}
 	\}
+
+"VOIM
+
