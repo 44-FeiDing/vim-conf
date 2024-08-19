@@ -16,7 +16,6 @@ set cursorline
 set cursorcolumn
 set mouse=a
 set completeopt-=preview
-autocmd VimEnter * NERDTreeToggle
 imap jl <Esc>
 vmap jl <Esc>
 
@@ -34,6 +33,9 @@ call plug#end()
 
 "NerdTree
 map <C-m> :NERDTreeToggle<CR>
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
 
 "auto-pairs
