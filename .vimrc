@@ -27,7 +27,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'vim-airline/vim-airline'
   Plug 'luochen1990/rainbow'
-  Plug 'Lixuannan/VOIM'
+  Plug 'lixuannan/VOIM'
 call plug#end()
 
 
@@ -76,4 +76,14 @@ let g:rainbow_conf = {
 	\}
 
 "VOIM
+map <F5> :RunCode %<CR>
+imap <F5> <esc> :RunCode %<CR>
+vmap <F5> <esc> :RunCode %<CR>
 
+map <F6> :JudgeCode %<CR>
+imap <F6> <esc> :JudgeCode %<CR>
+vmap <F6> <esc> :JudgeCode %<CR>
+
+map <F7> :DebugCode %<CR>
+imap <F7> <esc> :DebugCode %<CR>
+vmap <F7> <esc> :DebugCode %<CR>
