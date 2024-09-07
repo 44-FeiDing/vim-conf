@@ -17,8 +17,8 @@ set cursorcolumn
 set encoding=utf-8
 set mouse=a
 set completeopt-=preview
-imap jl <Esc>
-vmap jl <Esc>
+imap oi <Esc>
+vmap oi <Esc>
 noremap <C-a> ggVG
 vnoremap <C-y> "+y
 nnoremap <C-p> "*p
