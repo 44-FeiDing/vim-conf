@@ -52,6 +52,7 @@ let NERDTreeShowHidden=1
 
 "auto-pairs
 au Filetype FILETYPE let b:AutoPairs = {"(": ")"}au FileType php      let b:AutoPairs = AutoPairsDefine({'<?' : '?>', '<?php': '?>'})
+let g:AutoPairsMultilineClose = 0
 
 
 "ycm
