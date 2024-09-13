@@ -81,7 +81,7 @@ let g:rainbow_conf = {
 	\		},
 	\		'css': 0,
 	\		'nerdtree': 0,  
-	\		'taglist' : 0,	
+"	\		'taglist' : 0,	
 	\	}
 	\}
 
