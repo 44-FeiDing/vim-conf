@@ -15,10 +15,10 @@
 快捷键：
 
 1. `<C-s>`显示目录树；
-2. 插入模式或可视模式下 `wf` 进入普通模式；
+2. 插入模式下 `jk` 进入普通模式；
 3. `<leader>C<space>` 切换当前行或可视模式下选中的部分的被注释状态;
 4. `<C-k>`显示程序结构。
 
 ## 更新：
 
-弃用 VOIM。
+弃用 VOIM。(Sorry, [CodingCow](https://github.com/lixuannan))

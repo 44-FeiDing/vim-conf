@@ -19,8 +19,7 @@ set mouse=a
 set completeopt-=preview
 colorscheme molokai
 set t_Co=256
-imap wf <Esc>
-vmap wf <Esc>
+imap jk <Esc>
 noremap <C-a> ggVG
 vnoremap <C-y> "+y
 nnoremap <C-p> "*p
