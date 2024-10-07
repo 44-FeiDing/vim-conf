@@ -18,6 +18,8 @@ set encoding=utf-8
 set mouse=a
 set completeopt-=preview
 colorscheme molokai
+set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
+set guifont=Fira\ Code\ Regular\ 12
 set t_Co=256
 imap jk <Esc>
 noremap <C-a> ggVG
@@ -28,7 +30,7 @@ nnoremap <C-p> "*p
 call plug#begin('~/.vim/plugged')
   Plug 'preservim/nerdtree'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'Valloric/YouCompleteMe'
+  Plug 'ycm-core/YouCompleteMe'
   Plug 'scrooloose/nerdcommenter'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
