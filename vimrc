@@ -19,7 +19,8 @@ set mouse=a
 set completeopt-=preview
 colorscheme molokai
 set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
-set guifont=Fira\ Code\ Regular\ 12
+set guifont=Fira\ Code\ Regular\ 10
+let mapleader=","
 set t_Co=256
 imap jk <Esc>
 noremap <C-a> ggVG
