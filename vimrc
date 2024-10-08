@@ -25,7 +25,7 @@ set t_Co=256
 imap jk <Esc>
 noremap <C-a> ggVG
 vnoremap <C-y> "+y
-nnoremap <C-p> "*p
+nnoremap <C-p> "+gP
 
 "vim-plug
 call plug#begin('~/.vim/plugged')
