@@ -12,8 +12,8 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-set cursorline
-set cursorcolumn
+"set cursorline
+"set cursorcolumn
 set encoding=utf-8
 set mouse=a
 set completeopt-=preview
