@@ -8,9 +8,9 @@ set autowrite
 set confirm
 set autoindent
 set cindent
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 "set cursorline
 "set cursorcolumn
