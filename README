@@ -19,6 +19,11 @@
 3. `<leader>C<space>` 切换当前行或可视模式下选中的部分的被注释状态;
 4. `<C-k>`显示程序结构。
 
+若使用系统自带的 clangd，则
+```
+let g:ycm_clangd_binary_path = exepath("clangd15")
+```
+
 ## 更新：
 
 弃用 VOIM。(Sorry, [CodingCow](https://github.com/lixuannan))
