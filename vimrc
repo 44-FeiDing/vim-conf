@@ -12,20 +12,21 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-"set cursorline
+set cursorline
 "set cursorcolumn
 set encoding=utf-8
 set mouse=a
 set completeopt-=preview
 colorscheme molokai
-set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
+set guiligatures
 set guifont=Fira\ Code\ Regular\ 10
 let mapleader=","
 set t_Co=256
-imap jk <Esc>
-noremap <C-a> ggVG
-vnoremap <C-y> "+y
-nnoremap <C-p> "+gP
+inoremap jk <Esc>
+"noremap <C-a> ggVG
+"vnoremap <C-y> "+y
+"nnoremap <C-p> "+gP
+set clipboard=unnamedplus
 
 "vim-plug
 call plug#begin('~/.vim/plugged')
