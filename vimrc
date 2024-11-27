@@ -18,7 +18,7 @@ set encoding=utf-8
 set mouse=a
 set completeopt-=preview
 colorscheme molokai
-set guiligatures
+set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
 set guifont=Fira\ Code\ Regular\ 10
 let mapleader=","
 set t_Co=256
@@ -94,6 +94,6 @@ let g:rainbow_conf = {
 
 "airline
 "Should install powerline-fonts at the package manager first
-let g:airline_theme='simple'
+let g:airline_theme='molokai'
 let g:airline_powerline_fonts = 1
 let g:bufferline_echo = 0
