@@ -27,6 +27,7 @@ inoremap jk <Esc>
 "vnoremap <C-y> "+y
 "nnoremap <C-p> "+gP
 set clipboard=unnamedplus
+nnoremap <S-t> :belowright terminal<CR>
 
 "vim-plug
 call plug#begin('~/.vim/plugged')
