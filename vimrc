@@ -28,6 +28,10 @@ inoremap jk <Esc>
 "nnoremap <C-p> "+gP
 set clipboard=unnamedplus
 nnoremap <S-t> :belowright terminal<CR>
+vnoremap < <gv
+vnoremap > >gv
+nnoremap <C-a> :YcmCompleter GoToDefinition<CR>
+nnoremap <F2> :YcmCompleter RefactorRename 
 
 "vim-plug
 call plug#begin('~/.vim/plugged')
@@ -64,6 +68,7 @@ let g:AutoPairsMultilineClose = 0
 "let g:ycm_collect_identifiers_from_tags_files=1
 "let g:ycm_min_num_of_chars_for_completion=2
 "let g:ycm_seed_identifiers_with_syntax=1
+let g:ycm_clangd_binary_path = exepath("clangd15")
 
 "ranbow
  let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
