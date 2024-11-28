@@ -32,6 +32,18 @@ vnoremap < <gv
 vnoremap > >gv
 nnoremap <C-a> :YcmCompleter GoToDefinition<CR>
 nnoremap <F2> :YcmCompleter RefactorRename 
+let g:ycm_semantic_triggers =  {
+  \   'c,cpp,objc': [ 're!\w{2}', '_' ],
+  \ }
+let g:ycm_error_symbol = 'E'
+let g:ycm_warning_symbol = 'W'
+nnoremap <C-Up> :resize -2<CR>
+nnoremap <C-Down> :resize +2<CR>
+nnoremap <C-Left> :vertical resize -2<CR>
+nnoremap <C-Right> :vertical resize +2<CR>
+set scrolloff=5
+
+
 
 "vim-plug
 call plug#begin('~/.vim/plugged')
@@ -43,6 +55,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'luochen1990/rainbow'
   Plug 'yegappan/taglist'
+  Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 "taglist
