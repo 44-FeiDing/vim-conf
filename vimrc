@@ -15,6 +15,7 @@ set cursorline
 "set cursorcolumn
 set encoding=utf-8
 set mouse=a
+set backspace=2
 set completeopt-=preview
 colorscheme molokai
 set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
