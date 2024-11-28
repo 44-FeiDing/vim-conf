@@ -27,7 +27,3 @@
 ```
 let g:ycm_clangd_binary_path = exepath("clangd15")
 ```
-
-## 更新：
-
-弃用 VOIM。(Sorry, [CodingCow](https://github.com/lixuannan))
