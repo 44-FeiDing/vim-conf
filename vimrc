@@ -3,7 +3,6 @@ syntax on
 set nu
 set ruler
 set nocompatible
-set clipboard+=unnamed
 set autowrite
 set confirm
 set autoindent
@@ -22,6 +21,8 @@ set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
 set guifont=Fira\ Code\ Regular\ 10
 let mapleader=","
 set t_Co=256
+set ignorecase
+set smartcase
 inoremap jk <Esc>
 "noremap <C-a> ggVG
 "vnoremap <C-y> "+y
@@ -81,7 +82,7 @@ let g:AutoPairsMultilineClose = 0
 "let g:ycm_collect_identifiers_from_tags_files=1
 "let g:ycm_min_num_of_chars_for_completion=2
 "let g:ycm_seed_identifiers_with_syntax=1
-let g:ycm_clangd_binary_path = exepath("clangd15")
+"let g:ycm_clangd_binary_path = exepath("clangd15")
 
 "ranbow
  let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
