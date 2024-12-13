@@ -18,8 +18,8 @@ set mouse=a
 set backspace=2
 set completeopt-=preview
 colorscheme molokai
-set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
-set guifont=Fira\ Code\ Regular\ 10
+"set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
+"set guifont=Fira\ Code\ Regular\ 10
 let mapleader=","
 set t_Co=256
 set ignorecase
