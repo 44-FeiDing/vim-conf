@@ -18,27 +18,17 @@ set mouse=a
 set backspace=2
 set completeopt-=preview
 colorscheme molokai
-"set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
-"set guifont=Fira\ Code\ Regular\ 10
+set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
+set guifont=Fira\ Code\ 10
 let mapleader=","
 set t_Co=256
 set ignorecase
 set smartcase
 inoremap jk <Esc>
-"noremap <C-a> ggVG
-"vnoremap <C-y> "+y
-"nnoremap <C-p> "+gP
 set clipboard=unnamedplus
 nnoremap <S-t> :belowright terminal<CR>
 vnoremap < <gv
 vnoremap > >gv
-nnoremap <C-a> :YcmCompleter GoToDefinition<CR>
-nnoremap <F2> :YcmCompleter RefactorRename 
-let g:ycm_semantic_triggers =  {
-  \   'c,cpp,objc': [ 're!\w{2}', '_' ],
-  \ }
-let g:ycm_error_symbol = 'E'
-let g:ycm_warning_symbol = 'W'
 nnoremap <C-Up> :resize -2<CR>
 nnoremap <C-Down> :resize +2<CR>
 nnoremap <C-Left> :vertical resize -2<CR>
@@ -57,7 +47,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'luochen1990/rainbow'
   Plug 'yegappan/taglist'
-  Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 "taglist
@@ -79,11 +68,14 @@ let g:AutoPairsMultilineClose = 0
 
 
 "ycm
-"let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
-"let g:ycm_collect_identifiers_from_tags_files=1
-"let g:ycm_min_num_of_chars_for_completion=2
-"let g:ycm_seed_identifiers_with_syntax=1
 "let g:ycm_clangd_binary_path = exepath("clangd15")
+let g:ycm_semantic_triggers =  {
+  \   'c,cpp,objc': [ 're!\w{2}', '_' ],
+  \ }
+let g:ycm_error_symbol = 'E'
+let g:ycm_warning_symbol = 'W'
+nnoremap <C-a> :YcmCompleter GoToDefinition<CR>
+nnoremap <F2> :YcmCompleter RefactorRename 
 
 "ranbow
  let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
