@@ -40,9 +40,9 @@ set scrolloff=5
 "vim-plug
 call plug#begin('~/.vim/plugged')
   Plug 'preservim/nerdtree'
-  Plug 'jiangmiao/auto-pairs'
+  Plug 'LunarWatcher/auto-pairs'
   Plug 'ycm-core/YouCompleteMe'
-  Plug 'scrooloose/nerdcommenter'
+  Plug 'preservim/nerdcommenter'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'luochen1990/rainbow'
