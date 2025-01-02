@@ -41,7 +41,7 @@ set scrolloff=5
 call plug#begin('~/.vim/plugged')
   Plug 'preservim/nerdtree'
   Plug 'LunarWatcher/auto-pairs'
-  Plug 'ycm-core/YouCompleteMe'
+  Plug 'ycm-core/YouCompleteMe', { 'branch': 'legacy-vim-8.2' }
   Plug 'preservim/nerdcommenter'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
