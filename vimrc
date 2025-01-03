@@ -17,10 +17,9 @@ set encoding=utf-8
 set mouse=a
 set backspace=2
 set completeopt-=preview
-colorscheme molokai
 set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
 set guifont=Fira\ Code\ 10
-var mapleader=","
+g:mapleader = ","
 set t_Co=256
 set ignorecase
 set smartcase
@@ -50,8 +49,8 @@ plug#begin('~/.vim/plugged')
 plug#end()
 
 #taglist
-g:Tlist_Use_Right_Window=1
-map<C-k> :TlistToggle<CR>
+g:Tlist_Use_Right_Window = 1
+map <C-k> :TlistToggle<CR>
 
 #NerdTree
 map <C-s> :NERDTreeToggle<CR>
@@ -59,7 +58,7 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 g:NERDTreeFileLines = 1
-var NERDTreeShowHidden=1
+g:NERDTreeShowHidden = 1
 
 
 #auto-pairs
@@ -78,35 +77,34 @@ nnoremap <C-a> :YcmCompleter GoToDefinition<CR>
 nnoremap <F2> :YcmCompleter RefactorRename 
 
 #ranbow
-g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+g:rainbow_active = 1 #0 if you want to enable it later via :RainbowToggle
 g:rainbow_conf = {
-		'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-		'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
-		'operators': '_,_',
-		'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-		'separately': {
-			'*': {},
-			'tex': {
-				'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-			},
-			'lisp': {
-				'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-			},
-			'vim': {
-				'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-			},
-			'html': {
-				'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
-			},
-			'css': 0,
-			'nerdtree': 0,  
-			'taglist' : 0,	
-		}
-	}
+    'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+    'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+    'operators': '_,_',
+    'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+    'separately': {
+        '*': {},
+        'tex': {
+            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+        },
+        'lisp': {
+            'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+        },
+        'vim': {
+            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+        },
+#        'html': {
+#            'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+#        },
+        'css': 0,
+        'nerdtree': 0, 
+    }
+}
+
 
 #airline
 #Should install powerline-fonts at the package manager first
-g:airline_theme='molokai'
 g:airline_powerline_fonts = 1
 g:bufferline_echo = 0
 
