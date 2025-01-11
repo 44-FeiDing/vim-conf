@@ -17,7 +17,7 @@ set mouse=a
 set backspace=2
 set completeopt-=preview
 set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
-set guifont=FiraCode\ Nerd\ Font\ 10
+set guifont=FiraCode\ Nerd\ Font\ Mono\ 10
 let mapleader=","
 set t_Co=256
 set ignorecase
@@ -34,6 +34,18 @@ nnoremap <C-Right> :vertical resize +2<CR>
 set scrolloff=5
 
 
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" An example of vim-plug section ---------------------------------------------
+call plug#begin()
+Plug 'junegunn/seoul256.vim'
+call plug#end()
+
+silent! colorscheme seoul256
 
 "vim-plug
 call plug#begin('~/.vim/plugged')
@@ -45,8 +57,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'luochen1990/rainbow'
   Plug 'yegappan/taglist'
+  Plug 'tomasr/molokai'
   Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+colorscheme molokai
 
 "taglist
 let g:Tlist_Use_Right_Window=1
@@ -105,5 +120,6 @@ let g:rainbow_conf = {
 
 "airline
 "Should install powerline-fonts at the package manager first
+let g:airline_theme='molokai'
 let g:airline_powerline_fonts = 1
 let g:bufferline_echo = 0
