@@ -12,9 +12,11 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set cursorline
+set relativenumber
 set encoding=utf-8
 set mouse=a
-set backspace=2
+set backspace=indent,eol,start
+set completeopt-=preview
 set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
 set guifont=FiraCode\ Nerd\ Font\ Mono\ 10
 let mapleader=","
