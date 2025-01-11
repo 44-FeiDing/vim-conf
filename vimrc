@@ -15,15 +15,15 @@ set cursorline
 set encoding=utf-8
 set mouse=a
 set backspace=2
-set completeopt-=preview
 set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
 set guifont=FiraCode\ Nerd\ Font\ Mono\ 10
 let mapleader=","
 set t_Co=256
 set ignorecase
 set smartcase
-inoremap jk <Esc>
 set clipboard=unnamedplus
+
+inoremap jk <Esc>
 nnoremap <leader>t :belowright terminal<CR>
 vnoremap < <gv
 vnoremap > >gv
@@ -31,7 +31,11 @@ nnoremap <C-Up> :resize -2<CR>
 nnoremap <C-Down> :resize +2<CR>
 nnoremap <C-Left> :vertical resize -2<CR>
 nnoremap <C-Right> :vertical resize +2<CR>
-set scrolloff=5
+
+"keep cursor away from top or bottom
+set scrolloff=5 
+"auto save
+au InsertLeave * write
 
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -80,8 +84,8 @@ let g:AutoPairsMultilineClose = 0
 let g:ycm_semantic_triggers =  {
             \   'c,cpp,objc': [ 're!\w{2}', '_' ],
             \ }
-let g:ycm_error_symbol = '⚠️'
-let g:ycm_warning_symbol = 'W'
+let g:ycm_error_symbol = ''
+let g:ycm_warning_symbol = ''
 nnoremap <leader>d :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>r :YcmCompleter RefactorRename 
 
