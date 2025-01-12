@@ -50,7 +50,7 @@ endif
 call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree'
     Plug 'LunarWatcher/auto-pairs'
-    Plug 'ycm-core/YouCompleteMe', { 'branch': 'legacy-vim-8.2' }
+    Plug 'ycm-core/YouCompleteMe'
     Plug 'preservim/nerdcommenter'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
