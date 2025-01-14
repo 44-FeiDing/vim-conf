@@ -34,6 +34,10 @@ nnoremap <C-Up> :resize -2<CR>
 nnoremap <C-Down> :resize +2<CR>
 nnoremap <C-Left> :vertical resize -2<CR>
 nnoremap <C-Right> :vertical resize +2<CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 "keep cursor away from top or bottom
 set scrolloff=5 
@@ -56,7 +60,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'luochen1990/rainbow'
-    Plug 'yegappan/taglist'
+    Plug 'preservim/tagbar'
     Plug 'tomasr/molokai'
     Plug 'mhinz/vim-startify'
     Plug 'ryanoasis/vim-devicons'
@@ -64,9 +68,9 @@ call plug#end()
 
 colorscheme molokai
 
-"taglist
-let g:Tlist_Use_Right_Window=1
-noremap <leader>k :TlistToggle<CR>
+"tagbar
+"let g:Tlist_Use_Right_Window=1
+noremap <leader>k :TagbarToggle<CR>
 
 "NerdTree
 map <leader>e :NERDTreeToggle<CR>
@@ -115,7 +119,6 @@ let g:rainbow_conf = {
             \		},
             \		'css': 0,
             \		'nerdtree': 0,  
-            \		'taglist' : 0,	
             \	}
             \}
 
