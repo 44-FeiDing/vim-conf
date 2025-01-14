@@ -18,7 +18,8 @@ set mouse=a
 set backspace=indent,eol,start
 set completeopt-=preview
 set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
-set guifont=FiraCode\ Nerd\ Font\ Mono\ 10
+set guifont=FiraCode\ Nerd\ Font\ 10
+set ambiwidth=double
 let mapleader=","
 set t_Co=256
 set ignorecase
