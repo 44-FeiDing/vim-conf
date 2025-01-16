@@ -18,7 +18,7 @@ set mouse=a
 set backspace=indent,eol,start
 set completeopt-=preview
 set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
-set guifont=FiraCode\ Nerd\ Font\ 10
+set guifont=FiraCode\ Nerd\ Font\ 12
 set ambiwidth=double
 let mapleader=","
 set t_Co=256
@@ -93,6 +93,7 @@ let g:ycm_semantic_triggers =  {
             \ }
 let g:ycm_error_symbol = ''
 let g:ycm_warning_symbol = ''
+let g:ycm_clangd_args = [ '--header-insertion=never' ]
 nnoremap <leader>d :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>r :YcmCompleter RefactorRename 
 
