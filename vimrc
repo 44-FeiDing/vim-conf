@@ -25,7 +25,6 @@ set t_Co=256
 set ignorecase
 set smartcase
 set clipboard=unnamedplus
-
 inoremap jk <Esc>
 nnoremap <leader>t :belowright terminal<CR>
 vnoremap < <gv
@@ -37,11 +36,8 @@ nnoremap <C-Right> :vertical resize +2<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
 "keep cursor away from top or bottom
 set scrolloff=5 
-"auto save
 au InsertLeave * write
 
 
@@ -69,14 +65,12 @@ call plug#end()
 colorscheme molokai
 
 "tagbar
-"let g:Tlist_Use_Right_Window=1
 noremap <leader>k :TagbarToggle<CR>
 
 "NerdTree
 map <leader>e :NERDTreeToggle<CR>
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
-autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+autocmd VimEnter * NERDTree | wincmd p
 let g:NERDTreeFileLines = 1
 let NERDTreeShowHidden=1
 
@@ -97,31 +91,9 @@ let g:ycm_clangd_args = [ '--header-insertion=never' ]
 nnoremap <leader>d :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>r :YcmCompleter RefactorRename 
 
-"ranbow
+"rainbow
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
-let g:rainbow_conf = {
-            \	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-            \	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
-            \	'operators': '_,_',
-            \	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-            \	'separately': {
-            \		'*': {},
-            \		'tex': {
-            \			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-            \		},
-            \		'lisp': {
-            \			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-            \		},
-            \		'vim': {
-            \			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-            \		},
-            \		'html': {
-            \			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
-            \		},
-            \		'css': 0,
-            \		'nerdtree': 0,  
-            \	}
-            \}
+
 
 "airline
 "Should install powerline-fonts at the package manager first
