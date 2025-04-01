@@ -46,6 +46,7 @@ call plug#begin()
 
     " auto pair
     Plug 'LunarWatcher/auto-pairs'
+    Plug 'tpope/vim-surround'
 
     " completer
     Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer' }
@@ -119,6 +120,7 @@ nnoremap <ESC> <CMD>nohlsearch<CR>
 
 " NerdTree
 nnoremap <leader>e <CMD>NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
 
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
@@ -158,7 +160,7 @@ nnoremap gi <cmd>YcmCompleter GoToImplementation<cr>
 nnoremap gr <cmd>YcmCompleter GoToReferences<cr>
 nnoremap gn <cmd>YcmCompleter GoToInclude<cr>
 nnoremap <leader>rn <cmd>YcmCompleter RefactorRename
-nnoremap <leader>f <cmd>YcmCompleter Format<cr>
+nnoremap <leader>f <cmd>YcmCompleter FixIt<cr>
 
 let g:ycm_complete_in_strings = 0
 let g:ycm_semantic_triggers =  {
@@ -181,10 +183,10 @@ let g:ycm_language_server =
 
 
 " snip
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<C-i>"
+let g:UltiSnipsJumpForwardTrigger="<C-b>"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+" let g:UltiSnipsEditSplit="vertical"
 
 " Copilot
 inoremap <silent><script><expr> <A-y> copilot#Accept("\<CR>")
