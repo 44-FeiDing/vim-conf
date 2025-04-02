@@ -104,7 +104,7 @@ colorscheme molokai
 let g:mapleader = " "
 let g:maplocalleader = " "
 inoremap jk <Esc>
-nnoremap <leader>t <CMD>belowright terminal<CR>
+nnoremap <leader>t <CMD>tab terminal<CR>
 vnoremap < <gv
 vnoremap > >gv
 nnoremap <C-Up> <CMD>resize -2<CR>
@@ -124,9 +124,6 @@ let NERDTreeQuitOnOpen=1
 
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
-
-" Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 " If more than one window and previous buffer was NERDTree, go back to it.
 autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
@@ -159,7 +156,7 @@ nnoremap gy <cmd>YcmCompleter GoToType<cr>
 nnoremap gi <cmd>YcmCompleter GoToImplementation<cr>
 nnoremap gr <cmd>YcmCompleter GoToReferences<cr>
 nnoremap gn <cmd>YcmCompleter GoToInclude<cr>
-nnoremap <leader>rn <cmd>YcmCompleter RefactorRename
+nnoremap <leader>rn :YcmCompleter RefactorRename
 nnoremap <leader>f <cmd>YcmCompleter FixIt<cr>
 
 let g:ycm_complete_in_strings = 0
