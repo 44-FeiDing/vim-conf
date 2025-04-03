@@ -42,7 +42,6 @@ call plug#begin()
     Plug 'preservim/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-    Plug 'PhilRunninger/nerdtree-visual-selection'
 
     " auto pair
     Plug 'LunarWatcher/auto-pairs'
@@ -67,6 +66,24 @@ call plug#end()
 
 " Options
 
+if has("gui_running")
+    set termguicolors
+    set guifont=FiraCode\ Nerd\ Font\ Mono\ 10
+    set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
+else
+    set t_Co=256
+    if has("autocmd")
+        au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+        au InsertEnter,InsertChange *
+      \ if v:insertmode == 'i' |
+      \   silent execute '!echo -ne "\e[6 q"' | redraw! |
+      \ elseif v:insertmode == 'r' |
+      \   silent execute '!echo -ne "\e[4 q"' | redraw! |
+      \ endif
+        au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+    endif
+endif
+
 syntax on
 set nu
 set ruler
@@ -83,9 +100,6 @@ set encoding=utf-8
 set mouse=a
 set backspace=indent,eol,start
 set completeopt-=preview
-set guifont=FiraCode\ Nerd\ Font\ Mono\ 10
-set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
-set t_Co=256
 set ignorecase
 set smartcase
 set clipboard=unnamedplus
@@ -130,6 +144,10 @@ autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | en
 
 let g:NERDTreeFileLines = 1
 let NERDTreeShowHidden=1
+
+
+" auto-pairs
+let g:AutoPairsMapBS = 1
 
 
 " Rainbow
