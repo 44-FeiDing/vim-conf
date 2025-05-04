@@ -9,57 +9,28 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin()
-    " color scheme
     Plug 'tomasr/molokai'
-
-    " tiny game
     Plug 'vim/killersheep'
-
-    " comment
     Plug 'tpope/vim-commentary'
-
-    " rainbow parentheses
     Plug 'luochen1990/rainbow'
-
-    " status line
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-
-    " startify
     Plug 'mhinz/vim-startify'
-
-    " convinient sudo
     Plug 'lambdalisue/vim-suda'
-
     Plug 'Yggdroot/indentLine'
-
     Plug 'github/copilot.vim'
-
-    " debugger
     Plug 'puremourning/vimspector', { 'do': './install_gadget.py --enable-bash --enable-python --enable-cpp' }
-
-    " file explorer
     Plug 'preservim/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-    " auto pair
     Plug 'LunarWatcher/auto-pairs'
-    Plug 'tpope/vim-surround'
-
-    " completer
     Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer' }
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
-
-    " meson
     Plug 'igankevich/mesonic'
-
-    " git
     Plug 'tpope/vim-fugitive'
-
     Plug 'ryanoasis/vim-devicons'
-    
+    Plug 'machakann/vim-sandwich'
 call plug#end()
 
 
